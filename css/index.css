@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.welcomePage{
+	width: 375px;
+	height: 100%;
+	position: fixed;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	left: 0;
+	top: 0;
+	background-color: deepskyblue;
+	background-image: url("../img/Quiz-Time.png");
+	background-size: 375px auto;
+	background-repeat: no-repeat;
+	background-position: center 30px;
+}
+.welcomePage .input{
+	height: 40px;
+	width: 200px;
+	padding: 0 15px;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 20px;
+	margin-top: 70px;
+}
+.welcomePage .input input{
+	height: 40px;
+	width: 170px;
+	outline: none;
+	border: rgba(0,0,0,0);
+	background-color: rgba(0,0,0,0);
+	font-size: 25px;
+	line-height: 40px;
+	color: white;
+}
+.welcomePage .start{
+	height: 50px;
+	width: 180px;
+	margin: 40px calc((375px - 180px)/2);
+	background-color: darkorange;
+	line-height: 46px;
+	font-size: 36px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 15px;
+	border: 2px solid white;
+}
+/*.welcomePage .start:hover{*/
+/*	box-shadow: 0px 6px 10px dimgrey;*/
+/*}*/
