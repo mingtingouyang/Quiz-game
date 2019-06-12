@@ -15,10 +15,11 @@
 	left: 0;
 	top: 0;
 	background-color: deepskyblue;
-	background-image: url("../img/Quiz-Time.png");
+	background-image: url("../img/Quiz-Time.png"), url("../img/sun.png");
 	background-size: 375px auto;
 	background-repeat: no-repeat;
-	background-position: center 30px;
+	background-position: center 50px, 160px bottom;
+	z-index: 2;
 }
 .welcomePage .input{
 	height: 40px;
@@ -26,7 +27,9 @@
 	padding: 0 15px;
 	background-color: rgba(0,0,0,0.7);
 	border-radius: 20px;
-	margin-top: 70px;
+	margin-top: 90px;
+	box-shadow: none;
+	transition: box-shadow 0.3s;
 }
 .welcomePage .input input{
 	height: 40px;
@@ -50,7 +53,142 @@
 	text-align: center;
 	border-radius: 15px;
 	border: 2px solid white;
+	box-shadow: 0px 6px 10px dimgrey;
+	transition: box-shadow 0.3s;
 }
-/*.welcomePage .start:hover{*/
-/*	box-shadow: 0px 6px 10px dimgrey;*/
-/*}*/
+.welcomePage .foot{
+	position: fixed;
+	top: calc(100% - 50px);
+	width: 375px;
+	text-align: center;
+	font-size: 10px;
+	color: #6c6c6c;
+
+}
+.mainPage{
+	width: 375px;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: deepskyblue;
+	background-image: url("../img/background.png");
+	background-repeat: no-repeat;
+	background-size: 375px auto;
+	background-position: bottom;
+	z-index: 1;
+}
+.mainPage .timeout{
+	width: 375px;
+	height: 40px;
+	color: red;
+	background-image: url("../img/time.png");
+	background-repeat: no-repeat;
+	background-size: auto 35px;
+	background-position: 330px center;
+	font-size: 27px;
+	font-weight: bold;
+	padding-left: 290px;
+	line-height: 40px;
+}
+.mainPage .question{
+	width: 330px;
+	margin: 30px auto;
+	background-color: #ffc000;
+	color: white;
+	font-size: 22px;
+	line-height: 28px;
+	padding: 10px 15px;
+	border-radius: 15px;
+	box-shadow: 0px 6px 10px dimgrey;
+	font-weight: bold;
+	animation: spin 0.6s 1;
+}
+.mainPage .answer{
+	width: 330px;
+	margin: 20px auto;
+	background-color: #b3a2c7;
+	color: white;
+	font-size: 22px;
+	line-height: 28px;
+	padding: 10px 15px;
+	border-radius: 15px;
+	box-shadow: 0px 6px 10px dimgrey;
+	animation: spin 0.6s 1;
+	transition: box-shadow 0.7s;
+}
+@keyframes spin {
+	from{
+		transform: rotateX(0deg);
+	}
+	to{
+		transform: rotateX(360deg);
+	}
+}
+.scorePage{
+	width: 375px;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: deepskyblue;
+	background-image: url("../img/score.png");
+	background-repeat: no-repeat;
+	background-size: 375px auto;
+	background-position: top;
+	z-index: 0;
+}
+.scorePage .score h3{
+	margin-top: 90px;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	font-size: 25px;
+}
+.scorePage .score h1{
+	text-align: center;
+	font-weight: bold;
+	color: red;
+	font-size: 60px;
+	text-shadow: 0 0 8px white;
+}
+.scorePage .rank{
+	width: 330px;
+	height: 450px;
+	margin: 30px auto;
+	background-color: darkorange;
+	border-radius: 15px;
+	box-shadow: 0px 6px 10px dimgrey;
+}
+.scorePage .rank h2{
+	text-align: center;
+	line-height: 50px;
+	height: 50px;
+	font-weight: bold;
+}
+.scorePage .rank .list{
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	/*省略号*/
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.scorePage .again{
+	height: 50px;
+	width: 180px;
+	margin: 40px calc((375px - 180px)/2);
+	background-color: #92d050;
+	line-height: 46px;
+	font-size: 36px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 15px;
+	border: 2px solid white;
+	box-shadow: 0px 6px 10px dimgrey;
+	transition: box-shadow 0.3s;
+}
